@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>food●點餐系統</title>
+<!-- Bootstrap css-->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/main1.css" />
+<!-- Bootstrap js-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container" style="margin-top:50px;padding-bottom: 30px">
+		<h2 class="h2">請選擇要入座的桌號：</h2>
+			<div class="col-4 col-6-medium col-12-small">
+			<!-- Features -->
+				<section id="features">
+					<div class="container">
+						<div class="row aln-center">
+                            <% for (var i=0 ; i < 6 ; i++) { %> 
+                                <div class="col-4 col-6-medium col-12-small">
+                                  <!-- Feature -->
+                                    <section>
+										<a href="/merchant/qr/<%= i+1 %>">
+                                            <div class="tablestyle2">第 <%=i+1%> 桌</div>
+                                        </a>
+										<br><br>
+                                    </section>
+                                </div>
+                            <% }%>
+							
+						</div>
+					</div>
+				</section>
+            </div>
+	</div>	
+</body>
+</html>
